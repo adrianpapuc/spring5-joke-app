@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <style>
         *{
             margin: 0;
         }
         html{
             height: 100%;
+            font-size: 30px;
         }
         body{
             height: 100%;
@@ -24,12 +26,27 @@
         p{
             margin: 20px;
         }
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+            .container {
+                display: grid;
+            }
+            button{
+                height: 50px;
+                align-self: end;
+            }
+            span{
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Chuck Norris Jokes!!!</h1>
+    <h1>Chuck Norris <span>Jokes!!!</span></h1>
     <p th:text="${joke}">Insert Joke Here</p>
     <button onClick="window.location.reload();">Refresh</button>
 </div>
